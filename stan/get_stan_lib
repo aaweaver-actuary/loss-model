@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Change to the stan/include directory
+cd stan/include
+
+# Install the Stan math library
+git clone http://github.com/stan-dev/math.git
+
+# Remove unnecessary files
+rm -rf math/.git
+rm math/Jenkinsfile math/LICENSE.md math/README.md math/RELEASE-NOTES.txt math/runChecks.py math/runTests.py math/makefile math/.clang-format math/.gitignore math/.gitattributes math/.git-blame-ignore-revs
+rm -rf math/make math/benchmarks math/doxygen math/hooks math/licenses math/test math/.github 
